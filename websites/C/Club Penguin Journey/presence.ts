@@ -9,7 +9,7 @@ presence.on('UpdateData', async () => {
   const presenceData: PresenceData = {
     largeImageKey: icons.main,
     startTimestamp: browsingTimestamp,
-} 
+  }
   switch (document.location.hostname) {
     case 'cpjourney.net': {
       if (document.location.pathname === '/') {
