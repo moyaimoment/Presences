@@ -9,8 +9,7 @@ presence.on('UpdateData', async () => {
   const presenceData: PresenceData = {
     largeImageKey: icons.main,
     startTimestamp: browsingTimestamp,
-  }
-  
+  } 
   switch (document.location.hostname) {
     case 'cpjourney.net': {
       if (document.location.pathname === '/') {
@@ -64,8 +63,8 @@ presence.on('UpdateData', async () => {
         presenceData.state = 'Getting Support'
       }
       else if (document.location.pathname.startsWith('/articles/')) {
-          presenceData.details = 'Reading support article:'
-          presenceData.state = document.querySelector('[class*=article-content] > h1')?.textContent || ''
+        presenceData.details = 'Reading support article:'
+        presenceData.state = document.querySelector('[class*=article-content] > h1')?.textContent || ''
       }
       else if (document.location.pathname.startsWith('/articles')) {
         presenceData.details = 'Waddling around'
@@ -80,8 +79,8 @@ presence.on('UpdateData', async () => {
         presenceData.state = 'Logging in for Support'
       }
       else if (document.location.pathname.startsWith('/profile')) {
-          presenceData.details = 'Waddling around'
-          presenceData.state = 'Managing my profile'
+        presenceData.details = 'Waddling around'
+        presenceData.state = 'Managing my profile'
       }
       else {
         presenceData.details = 'Waddling around'
